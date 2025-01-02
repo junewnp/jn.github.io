@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <div class="strategy-header"> โปรดระบุแผนการดำเนินงานภายใต้แผนปฏิบัติการ
+        ด้านการป้องกันและควบคุมโรคไม่ติดต่อของประเทศไทย (พ.ศ. 2566-2570) 
+        ตามยุทธศาสตร์และตัวชี้วัดที่เกี่ยวข้อง</div> <br>
+    <form  id="selectionForm">
+        <div class="form-group">
+        <label for="strategy">เลือกยุทธศาสตร์ </label> 
+        <select id="strategy" name="strategy" class="strategy-opt"> 
+            <option value="">-- กรุณาเลือก --</option>
+            <option value="str1.html">ยุทธศาสตร์ที่ 1</option>
+            <option value="str2.html">ยุทธศาสตร์ที่ 2</option>
+            <option value="str3.html">ยุทธศาสตร์ที่ 3</option>
+        </select> <br><br>
+        <button type="button" onclick="navigate()" class="submit-btn">ไปยังหน้าถัดไป</button>
+    </div>
+    </form>
+    <script>
+        function navigate() {
+            const selectedOption = document.getElementById("strategy").value;
+            if (selectedOption) {
+                window.location.href = selectedOption;
+            } else {
+                alert("กรุณาเลือกตัวเลือก");
+            }
+        }
+    </script>
+</body> 
+</html>
+
